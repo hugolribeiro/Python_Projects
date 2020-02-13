@@ -9,12 +9,14 @@ def carrega(vt):
     vt.append(random.randint(0,100))
   return(vt)
 
+
 def classifica(vt):
   for i in range(0,19,1):
     for j in range((i+1), 20,1):
       if vt[i] > vt[j]:
         vt[i], vt[j] = vt[j], vt[i]
   return(vt)
+
 
 def pesquisa(vt):
   n = int(input("\nDigite aqui um número que queira pesquisar: "))
