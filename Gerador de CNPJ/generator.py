@@ -1,3 +1,4 @@
+# version 0.0.2
 def generate():
     from random import randint
     while True:
@@ -9,8 +10,8 @@ def generate():
     actual_cnpj += '0001'
     with1digit = actual_cnpj + str(calculate_1stdigit(actual_cnpj))
     with2digits = with1digit + str(calculate_2stdigit(with1digit))
-    return (with2digits)
-
+    formated_cnpj = format_cnpj(with2digits)
+    return formated_cnpj
 
 
 def calculate_1stdigit(clean_cnpj):
@@ -33,3 +34,8 @@ def calculate_2stdigit(cnpj_with1digit):
     if second_digit > 9:
         second_digit = 0
     return second_digit
+
+
+def format_cnpj(cnpj):
+    formated_cnpj = f'{cnpj[:2]}.{cnpj[2:5]}.{cnpj[5:8]}/{cnpj[8:12]}-{cnpj[12:14]}'
+    return (formated_cnpj)
