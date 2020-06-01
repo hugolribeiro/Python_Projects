@@ -69,14 +69,15 @@ def characters_list():
     return (chosen_word)
 
 
-#A function to hidden the word in _ _ _ _ _
+# A function to hidden the word in _ _ _ _ _
 def hidden_word(chosen_word):
     hidden_word = [letter for letter in chosen_word]
     for letter in range(0, len(hidden_word)):
         hidden_word[letter] = '_'
     setup(chosen_word, hidden_word)
 
-#This function will create an alphabet, will print a greetings and will call the play function 
+
+# This function will create an alphabet, will print a greetings and will call the play function
 def setup(chosen_word, hidden_word):
     shots = 0
     inputed_letters = []
@@ -92,7 +93,7 @@ def setup(chosen_word, hidden_word):
          inputed_letters)
 
 
-#This function is the main function. Here contain the comparator 
+# This function is the main function. Here contain the comparator
 def play(chosen_word, hidden_word, shots, chosen_word_list, alphabet, found,
          inputed_letters):
     while shots <= 6 and found == False:
