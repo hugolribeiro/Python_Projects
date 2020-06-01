@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 import pprint
+from time import sleep
 
 
 def loop_pages():
@@ -13,6 +14,7 @@ def loop_pages():
         subtext = soup.select('.subtext')
         actual_list = (create_custom_hn(links, subtext))
         total_list.extend(actual_list)
+        sleep(30)
     total_list = sort_stories_by_votes(total_list)
     pprint.pprint(total_list)
 
