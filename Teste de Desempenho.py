@@ -15,19 +15,15 @@ def verify_prime(num):
     if num % 2 == 0 and num > 2:
         return False
     root = int(num ** 0.5)
-    divisors = 0
     for count in range(root, 1, -1):
         if num % count == 0:
-            divisors += 1
             return False
     return True
 
 
 def verify_prime_noroot(num):
-    divisors = 0
     for count in range(2, number + 1, 1):
         if num % count == 0:
-            divisors += 1
             return False
     return True
 
