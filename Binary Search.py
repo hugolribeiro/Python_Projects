@@ -1,6 +1,5 @@
-# Criar e coletar em um vetor [20] com números aleatórios de 0 a 100. Classificar este vetor em ordem crescente e mostre os dados.'
-# Programador: Hugo Leça Ribeiro
-# Data de Elaboração: 13.11.2019
+# Criar e coletar em um vetor [20] com números aleatórios de 0 a 100. Classificar este vetor em ordem crescente e
+# mostre os dados.' Programador: Hugo Leça Ribeiro Data de Elaboração: 13.11.2019
 
 import random
 
